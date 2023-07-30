@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: lightblue;
+    padding: 20px 0;
+}
+
+.score {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cookie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+}
+
+.cookie {
+    width: 300px;
+}
+
+.cursor-icon {
+  width: 24px;
+  height: 24px;
+  background-color: yellow;
+  border: 1px solid black;
+  margin: 5px;
+  display: inline-block;
+}
+
+
+.cookie {
+    width: 300px;
+    animation-name: rotateCookie;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateCookie {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.shrink {
+  animation-name: shrinkCookie;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shrinkCookie {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+    }
+}
+
+.tiny-image {
+  position: absolute;
+  width: 20px;
+  animation-name: fallDown;
+  animation-duration: 2s;
+}
+
+@keyframes fallDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(calc(100vh + 30px));
+        opacity: 0;
+    }
+}
