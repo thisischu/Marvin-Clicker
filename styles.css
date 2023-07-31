@@ -52,7 +52,7 @@ body, html {
 .cookie {
     width: 300px;
     animation-name: rotateCookie;
-    animation-duration: 50s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -68,7 +68,7 @@ body, html {
 
 .shrink {
   animation-name: shrinkCookie;
-  animation-duration: 0.2s;
+  animation-duration: 0.02s;
   animation-timing-function: ease-in-out;
 }
 
@@ -88,13 +88,4 @@ body, html {
   animation-duration: 2s;
 }
 
-@keyframes fallDown {
-    from {
-        transform: translateY(-30px);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(calc(100vh + 30px));
-        opacity: 0;
-    }
-}
+
